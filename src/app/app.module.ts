@@ -14,11 +14,22 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { AdminComponent } from './pages/admin/admin.component';
+import { RentComponent } from './pages/rent/rent.component';
+import { AuthorsComponent } from './pages/authors/authors.component';
+import { BooksComponent } from './pages/books/books.component';
+import { PublishersComponent } from './pages/publishers/publishers.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    RentComponent,
+    AuthorsComponent,
+    BooksComponent,
+    PublishersComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +43,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+<div>
+  <mat-toolbar color="accent">
+    <a routerLink="books">
+      <button mat-flat-button class="me-3">Books</button>
+    </a>
+    <a routerLink="authors">
+      <button mat-flat-button class="me-3">Authors</button>
+    </a>
+    <a routerLink="publishers">
+      <button mat-flat-button>Publishers</button>
+    </a>
+  </mat-toolbar>
+  <div class="container mt-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>

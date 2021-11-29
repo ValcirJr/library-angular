@@ -4,7 +4,6 @@ import {HttpClient} from "@angular/common/http";
 import {LoginService} from "../../services/login.service";
 import {Router} from "@angular/router";
 import {Credentials} from "../../models/credentials.model";
-import jwtDecode from "jwt-decode";
 
 @Component({
   selector: 'app-login',
@@ -29,8 +28,10 @@ export class LoginComponent implements OnInit {
         this.form.get('username')?.value,
         this.form.get('password')?.value)
 
-      this.loginService.authenticate(credentials, () => {
-        alert('funcionou')
+      this.loginService.authenticate(credentials, (user) => {
+        user.roles.includes("ROLE_ADMIN")
+          ? this.router.navigateByUrl("admin")
+          : this.router.navigateByUrl("rent")
       })
     }
     return false;
